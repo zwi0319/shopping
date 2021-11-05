@@ -1,0 +1,288 @@
+/* main模块 */
+.main {
+  width: 980px;
+  height: 455px;
+  margin-left: 220px;
+  margin-top: 10px;
+}
+.focus {
+  float: left;
+  width: 721px;
+  height: 455px;
+}
+.focus ul li img {
+  width: 721px;
+  height: 455px;
+}
+.newsflash {
+  float: right;
+  width: 250px;
+  height: 455px;
+}
+/* news模块 */
+.news {
+  height: 165px;
+  border: 1px solid #ccc;
+}
+.news-head {
+  height: 33px;
+  line-height: 33px;
+  border-bottom: 1px dotted #ccc;
+  padding: 0 15px;
+}
+.news-head h5 {
+  float: left;
+  font-size: 14px;
+}
+.news-head .more {
+  float: right;
+}
+.news-head .more::after {
+  content: "\e66c";
+  font-family: "iconfont";
+}
+.news-body {
+  margin: 5px 15px 0;
+}
+.news-body ul li {
+  height: 24px;
+  line-height: 24px;
+  overflow: hidden; /*溢出隐藏*/
+  white-space: nowrap; /*强制一行显示*/
+  text-overflow: ellipsis; /*强文字超出部分省略号显示*/
+}
+.news-body a {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+/* lifeservice模块 */
+.lifeservice {
+  overflow: hidden;
+  height: 209px;
+  border: 1px solid #ccc;
+  border-top: 0;
+}
+.lifeservice ul {
+  width: 252px;
+}
+.lifeservice ul li {
+  float: left;
+  width: 63px;
+  height: 71px;
+  border-right: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  text-align: center;
+}
+.lifeservice ul li a {
+  display: inline-block;
+  width: 24px;
+  height: 28px;
+  margin-top: 10px;
+  background: url(../images/icons.png) no-repeat -19px -15px;
+}
+.lifeservice ul li:nth-child(1) a {
+  background: url(../images/icons.png) no-repeat -19px -15px;
+}
+.lifeservice ul li:nth-child(2) a {
+  background: url(../images/icons.png) no-repeat -80px -15px;
+}
+.lifeservice ul li:nth-child(3) a {
+  background: url(../images/icons.png) no-repeat -141px -15px;
+}
+.lifeservice ul li:nth-child(4) a {
+  background: url(../images/icons.png) no-repeat -206px -15px;
+}
+/* bargain模块 */
+.bargain {
+  margin-top: 6px;
+}
+/* 推荐模块 */
+.recom {
+  height: 163px;
+  margin-top: 10px;
+  background-color: #ebebeb;
+}
+.recom_hd {
+  float: left;
+  width: 205px;
+  height: 163px;
+  background-color: #5c5251;
+}
+.recom_hd span:nth-child(1) {
+  display: block;
+  font-size: 100px;
+  color: #fff;
+  text-align: center;
+  line-height: 120px;
+}
+
+.recom_hd span:nth-child(2) {
+  display: block;
+  font-size: 16px;
+  color: #fff;
+  text-align: center;
+}
+.recom_bd {
+  float: left;
+}
+.recom_bd ul {
+  margin-left: 3px;
+}
+.recom_bd ul li {
+  position: relative;
+  float: left;
+}
+.recom_bd ul li img {
+  width: 248px;
+  height: 163px;
+}
+.recom_bd ul li:nth-child(-n + 3):after {
+  /*(n + 3)从第三个往后面选(-n + 3)从第三个往前面选*/
+  /* after属于行内元素，可以转换成块级元素，也可以加定位直接转换成块级元素 */
+  content: "";
+  position: absolute;
+  top: 10px;
+  right: 0;
+  width: 2px;
+  height: 145px;
+  background-color: #ddd;
+}
+/* 猜你喜欢模块 */
+.guess_love {
+  margin-top: 10px;
+}
+.love_hd {
+  height: 40px;
+  line-height: 40px;
+}
+.love_left {
+  float: left;
+  font-size: 16px;
+  font-weight: 700;
+}
+.love_right {
+  float: right;
+  font-size: 14px;
+}
+.love_right::after {
+  content: "\e6b3";
+  font-family: "iconfont";
+  font-size: 14px;
+  margin: 0 5px;
+}
+.love_bd {
+  height: 200px;
+  border: 1px solid #ccc;
+}
+.love_bd ul {
+  width: 1220px;
+  overflow: hidden;
+}
+.love_bd ul li {
+  float: left;
+  width: 200px;
+  height: 200px;
+}
+.love_bd ul li a {
+  display: block;
+  width: 200px;
+  height: 200px;
+}
+.love_bd ul li img {
+  width: 200px;
+  height: 150px;
+}
+.love_bd ul li p {
+  padding-left: 20px;
+  font-size: 14px;
+}
+.love_bd ul li i {
+  padding-left: 20px;
+  font-size: 14px;
+  font-weight: 700;
+  color: #c81623;
+}
+/* floor楼层模块 */
+.floor .w {
+  margin-top: 20px;
+}
+.box_hd {
+  height: 30px;
+  line-height: 30px;
+  border-bottom: 2px solid #c81623;
+}
+.box_hd h3 {
+  float: left;
+  color: #c81623;
+  font-size: 18px;
+  font-weight: 400;
+}
+.tab_list {
+  float: right;
+}
+.tab_list ul li {
+  float: left;
+}
+.tab_list ul li a {
+  padding: 0 15px;
+}
+.box_bd {
+  height: 360px;
+  background-color: rgb(154, 243, 255);
+}
+.tab_list_item div {
+  float: left;
+  height: 360px;
+}
+.col_210 {
+  width: 210px;
+  background-color: rgb(255, 152, 221);
+}
+.col_329 {
+  width: 329px;
+  background-color: rgb(236, 188, 255);
+}
+.col_221 {
+  width: 221px;
+  background-color: rgb(177, 255, 235);
+}
+.col_221_1 {
+  width: 221px;
+  background-color: rgb(246, 255, 203);
+}
+.col_219 {
+  width: 219px;
+  background-color: rgb(160, 198, 255);
+}
+/* swiper代码部分 */
+.swiper-container {
+  width: 100%;
+  height: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+.swiper-container img {
+  width: 721px;
+  height: 455px;
+}
+/* swiper代码部分 */

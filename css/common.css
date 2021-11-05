@@ -1,0 +1,295 @@
+/* 声明字体 ，一定要注意字体路径变化*/
+@font-face {
+  font-family: "iconfont"; /* Project id 2587873 */
+  src: url("../fonts/iconfont.woff2") format("woff2"),
+    url("../fonts/iconfont.woff") format("woff"),
+    url("../fonts/iconfont.ttf") format("truetype");
+}
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+/* 公共样式模块 */
+.w {
+  width: 1200px;
+  margin: 0 auto;
+}
+.fl {
+  float: left;
+}
+.fr {
+  float: right;
+}
+.style_red {
+  color: #c81623; /*公共红色样式类名*/
+}
+/* --------------------(快捷导航栏模块)------------------- */
+.shortcut {
+  height: 31px;
+  line-height: 31px;
+  /* 子盒子会继承父盒子的行高 */
+  background-color: #f1f1f1;
+}
+.shortcut ul li {
+  float: left;
+}
+/* 选择所有的偶数的小li */
+/* .shortcut .fr ul li:nth-child(even) {
+  width: 1px;
+  height: 12px;
+  background-color: #666;
+  margin: 9px 15px 0;
+} */
+.shortcut .fr span {
+  float: left;
+  margin: 0 10px;
+}
+/* 插入after伪元素 */
+.arrow_icon::after {
+  content: "\e6eb";
+  font-family: "iconfont";
+  margin-left: 5px;
+}
+/* 鼠标经过变色 */
+.arrow_icon:hover {
+  color: #c81623;
+}
+/* --------------------(head部分)------------------- */
+.header {
+  position: relative;
+  height: 105px;
+}
+/* logo 模块 */
+.logo {
+  position: absolute;
+  top: 25px;
+  width: 171px;
+  height: 61px;
+}
+.logo a {
+  display: block;
+  width: 171px;
+  height: 61px;
+  background: url(../images/logo.png) no-repeat;
+  font-size: 0; /* 京东做法 */
+  /* 淘宝做法
+  text-indent: -9999;
+  overflow: hidden; */
+}
+/* search 模块 */
+.search {
+  position: absolute;
+  top: 25px;
+  left: 346px;
+  width: 538px;
+  height: 36px;
+  border: 2px solid #c81623;
+}
+#search {
+  float: left;
+  width: 454px;
+  height: 32px;
+  padding-left: 10px;
+} /*input 和 button属于行内块元素，之间会有缝隙，添加浮动可清除他们之间的缝隙*/
+.button {
+  float: left;
+  width: 80px;
+  height: 32px;
+  background-color: #c81623;
+  font-size: 16px;
+  color: #fff;
+}
+/* hotWords模块  */
+.hotwords {
+  position: absolute;
+  top: 66px;
+  left: 346px;
+}
+.hotwords a {
+  padding: 0 10px;
+}
+/* 购物车模块 */
+.shopcar {
+  position: absolute;
+  top: 25px;
+  right: 60px;
+  width: 140px;
+  height: 35px;
+  line-height: 35px;
+  text-align: center;
+  border: 1px solid #bfbfbf;
+  background-color: #f7f7f7;
+}
+.shopcar a {
+  font-size: 14px;
+}
+/* 插入伪元素 */
+.shopcar::before {
+  content: "\e6e2";
+  font-family: iconfont;
+  margin-right: 10px;
+  font-size: 14px;
+  color: #c81623;
+}
+.shopcar::after {
+  content: "\e66c";
+  font-family: iconfont;
+  margin-left: 10px;
+  font-size: 12px;
+}
+.shopcar:hover {
+  color: #c81623;
+}
+.shopcar .count {
+  position: absolute;
+  top: 0px;
+  left: 100px;
+  height: 15px;
+  line-height: 15px;
+  background-color: #c81623;
+  color: #fff;
+  padding: 0 5px;
+  border-radius: 15px;
+}
+/* nav模块 */
+.nav {
+  height: 47px;
+  line-height: 45px;
+  border-bottom: 2px solid #c81623;
+}
+.nav .dropdown {
+  float: left;
+  width: 210px;
+  height: 45px;
+  background-color: #c81623;
+}
+.nav .dropdown dt {
+  width: 100%;
+  height: 100%;
+  color: #fff;
+  text-align: center;
+  font-size: 16px;
+}
+.nav .dropdown dd {
+  display: block;
+  width: 210px;
+  height: 465px;
+  background-color: #c81623;
+  margin-top: 2px;
+}
+.dropdown dd ul li {
+  position: relative;
+  height: 31px;
+  line-height: 31px;
+  margin-left: 2px;
+  padding-left: 10px;
+}
+.dropdown dd ul li::after {
+  position: absolute;
+  top: 0;
+  right: 10px;
+  content: "\e66c";
+  font-family: iconfont;
+  color: #fff;
+}
+.dropdown dd ul li:hover {
+  background-color: #fff;
+}
+.dropdown dd ul li a {
+  font-size: 14px;
+  color: #fff;
+}
+.dropdown dd ul li:hover a {
+  /*鼠标经过小li后，超链接a变色*/
+  color: #c81623;
+}
+.nav .navitems {
+  float: left;
+}
+.navitems ul li {
+  float: left;
+}
+.navitems ul li a {
+  display: block;
+  font-size: 16px;
+  padding: 0 25px;
+}
+/* --------------------(foot部分)------------------- */
+.footer {
+  height: 415px;
+  background-color: #f5f5f5;
+  padding-top: 30px;
+}
+.mod_service {
+  height: 80px;
+  border-bottom: 1px solid #ccc;
+}
+/* 服务模块 */
+.mod_service ul li {
+  float: left;
+  width: 300px;
+  height: 50px;
+  padding-left: 35px;
+}
+.mod_service ul li h5 {
+  float: left;
+  width: 50px;
+  height: 50px;
+  margin-right: 10px;
+}
+.mod_service ul li:nth-child(1) h5 {
+  background: url(../images/icons.png) no-repeat -252px -2px;
+}
+.mod_service ul li:nth-child(2) h5 {
+  background: url(../images/icons.png) no-repeat -255px -54px;
+}
+.mod_service ul li:nth-child(3) h5 {
+  background: url(../images/icons.png) no-repeat -257px -106px;
+}
+.mod_service ul li:nth-child(4) h5 {
+  background: url(../images/icons.png) no-repeat -257px -157px;
+}
+.service_text h4 {
+  font-size: 14px;
+}
+.service_text p {
+  font-size: 12px;
+}
+/* 帮助模块 */
+.mod_help {
+  height: 185px;
+  border-bottom: 1px solid #ccc;
+  padding-top: 20px;
+  padding-left: 50px;
+}
+.mod_help dl {
+  float: left;
+  width: 200px;
+}
+.mod_help dl:last-child {
+  /*选出最后一个dl*/
+  width: 90px;
+  text-align: center;
+}
+.mod_help dl dt {
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+/* 版权模块 */
+.mod_copyright {
+  text-align: center;
+  padding-top: 20px;
+}
+.links {
+  margin-bottom: 20px;
+}
+.links a {
+  margin: 0 5px;
+}
+.copyright {
+  line-height: 20px;
+}
